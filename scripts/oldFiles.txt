@@ -1,0 +1,2 @@
+/home/orthmox/Desktop/Google_python_automation/scripts/data/jane_profile_07272018.doc
+/home/orthmox/Desktop/Google_python_automation/scripts/data/jane_contact_07292018.csv
