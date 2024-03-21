@@ -18,11 +18,14 @@ def run(task):
 
 if __name__ == "__main__":
   tasks = []
-  for root, dirs, files in os.walk(src, topdown=True):
-    for name in dirs:
-      task = os.path.join(root, name)
-      if task not in tasks:
-        tasks.append(task)
+  for root, dirs, files in os.walk(src):
+    root_dir = root
+    task = dirs
+    break #breaks the loop after the first list of subdirectories in dirs
+  for item in task: #iterate over the list of directories
+    name = os.path.join(root_dir, item) #create path for all directories listed
+    if name not in tasks:
+      tasks.append(name) #populate tasks with directory paths
 
   with Pool(len(tasks)) as p: #Recommened handling of Pool submodule
     p.map(run, tasks)
