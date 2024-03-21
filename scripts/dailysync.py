@@ -12,7 +12,8 @@ dest = "Google_python_automation/data/prod_backup/"
 
 
 def run(task):
-  subprocess.call(["rsync", "-arg", src, dest])
+  #Run each task seperately
+  subprocess.call(["rsync", "-arg", task, dest])
   print("Handling {}".format(task))
 
 if __name__ == "__main__":
@@ -22,5 +23,6 @@ if __name__ == "__main__":
       task = os.path.join(root, name)
       if task not in tasks:
         tasks.append(task)
-  p = Pool(len(tasks))
-  p.map(run, tasks)
+
+  with Pool(len(tasks)) as p: #Recommened handling of Pool submodule
+    p.map(run, tasks)
