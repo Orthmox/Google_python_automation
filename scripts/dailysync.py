@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""using rsync to backup data for src to dest employing
+"""using rsync to backup data from src to dest employing
 the Pool submodule from multiprocessing to create one process
-task"""
+per task"""
 
 import subprocess
 import os
