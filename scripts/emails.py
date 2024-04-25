@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-
+""" This is a script provided in a qwiklabs session
+in module 3 in the Automating Real-World Tasks with Python course in
+the Google Automation with python career certificate program that 
+sends an email with an attachment
+"""
 
 import email.message
 import mimetypes

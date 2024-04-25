@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-
+""" This script checks system health and sends an email if
+certain values are exceeded. Written during a qwiklabs
+session in module 4 of the Au
+"""
 import psutil
 import shutil
 import email_supplier
